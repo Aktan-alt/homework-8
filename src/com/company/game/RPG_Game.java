@@ -16,6 +16,10 @@ public class RPG_Game {
 
         printStatistics(boss, heroes);
 
+        while (!isGameFinished(boss, heroes)){
+            round(boss, heroes);
+        }
+
     }
 
     private static void printStatistics(Boss boss, Hero[] heroes){

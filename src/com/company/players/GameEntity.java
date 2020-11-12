@@ -15,6 +15,11 @@ public abstract class GameEntity {
     }
 
     public void setHealth(int health) {
+        if (health < 0){
+            this.health = 0;
+        } else {
+            this.health = health;
+        }
         this.health = health;
     }
 

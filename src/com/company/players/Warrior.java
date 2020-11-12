@@ -1,5 +1,7 @@
 package com.company.players;
 
+import java.util.Random;
+
 public class Warrior extends Hero {
 
 
@@ -10,5 +12,9 @@ public class Warrior extends Hero {
     @Override
     public void applySuperAbility(Boss boss, Hero[] heroes) {
 
+        Random warr = new Random();
+        int x = warr.nextInt(5) + 2;
+        this.setDamage(getDamage() * x);
+        System.out.println(this.getDamage());
     }
 }
